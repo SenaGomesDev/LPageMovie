@@ -1,0 +1,127 @@
+@use 'variaveis';
+
+.hero {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background-image: url(../images/piratasnet/Logofundobranc.jpg);
+    text-align: center;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Cor da sobreposição com opacidade */
+        z-index: 1; /* Para garantir que o overlay fique abaixo do conteúdo */
+    }
+    
+    .hero__content {
+        position: relative;
+        z-index: 2; /* Para garantir que o conteúdo fique acima do overlay */
+    }
+
+    &__content {
+        max-width: 640px;
+    }
+
+    &__branding {
+        max-width: 320px;
+        margin: 0 auto 38px;
+    }
+
+    .title--small {
+        margin-top: 16px;
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 320px;
+    }
+
+    .informativos {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        color: rgb(192, 192, 192);
+        font-family: Inspire, sans-serif;
+        font-size: 12px;
+        gap: 10px; /* Espaçamento entre as imagens e o texto */
+        flex-wrap: wrap;
+        justify-content: center;
+        
+
+        .textOne {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .textTwo {
+            width: 100%; /* Faz com que o texto abaixo ocupe toda a largura */
+            text-align: center;
+            margin-top: 5px;
+            color: rgb(192, 192, 192);
+        }
+        
+        .item1 {
+            height: 20px;
+            width: 20px;
+            border-radius: 4px;
+        }
+        .item2 {
+            width: 38.09px;
+            height: 20px;
+            border-radius: 5px;
+        }
+        
+        .item3 {
+            width: 27.97px;
+            height: 20px;
+            border-radius: 5px;
+
+        }
+    }
+
+    button {
+        background-color: variaveis.$corPrimeiroBotao;
+        border-radius: 4px;
+        border: none;
+        box-sizing: border-box;
+        color: rgb(2, 23, 42);
+        cursor: pointer;
+        display: flex;
+        font-family: Inspire, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 1.76px;
+        padding: 8px 14px;
+        text-transform: uppercase;
+        transition: all 0.2s ease-in-out;
+        width: 226.391px;
+        background-repeat: no-repeat;
+        text-transform: uppercase;
+    }
+    
+    .botaOne{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    p {
+        font-size: 18px; /* Alterar para o tamanho desejado */
+        line-height: 1.5; /* Ajusta o espaçamento entre as linhas para melhor legibilidade */
+        color: variaveis.$corTextoSecundario; /* Cor opcional do texto */
+        font-weight: 400;
+    }
+    
+
+}
